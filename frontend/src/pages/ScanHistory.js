@@ -11,11 +11,11 @@ function ScanHistory() {
 
   const fetchHistory = async () => {
     try {
-      const urlRes = await fetch('http://127.0.0.1:5000/api/history/urls');
+      const urlRes = await fetch('https://threatpulse-api.onrender.com/api/history/urls');
       const urlData = await urlRes.json();
       if (urlData.success) setUrlHistory(urlData.history);
 
-      const ipRes = await fetch('http://127.0.0.1:5000/api/history/ips');
+      const ipRes = await fetch('https://threatpulse-api.onrender.com/api/history/ips');
       const ipData = await ipRes.json();
       if (ipData.success) setIpHistory(ipData.history);
     } catch (err) {

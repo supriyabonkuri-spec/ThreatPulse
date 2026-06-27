@@ -12,7 +12,7 @@ function URLAnalyzer() {
     setError('');
     setResult(null);
     try {
-      const res = await fetch('http://127.0.0.1:5000/api/scan/url', {
+      const res = await fetch('https://threatpulse-api.onrender.com/api/scan/url', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ url })
