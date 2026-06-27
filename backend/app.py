@@ -9,7 +9,7 @@ from database import init_db, save_url_scan, save_ip_scan, get_url_history, get_
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://threat-pulse-six.vercel.app", "http://localhost:3000"])
 
 init_db()
 

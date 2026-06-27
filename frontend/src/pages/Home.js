@@ -17,7 +17,7 @@ function Home() {
 
   const fetchStats = async () => {
     try {
-      const res = await fetch('http://127.0.0.1:5000/api/cves/stats');
+      const res = await fetch('https://threatpulse-api.onrender.com/api/cves/stats');
       const data = await res.json();
       if (data.success) setStats(data.stats);
     } catch (err) {
@@ -27,7 +27,7 @@ function Home() {
 
   const fetchRecentCVEs = async () => {
     try {
-      const res = await fetch('http://127.0.0.1:5000/api/cves');
+      const res = await fetch('https://threatpulse-api.onrender.com/api/cves');
       const data = await res.json();
       if (data.success) setRecentCVEs(data.cves.slice(0, 5));
     } catch (err) {

@@ -14,8 +14,8 @@ function CVEExplorer() {
     setLoading(true);
     try {
       const url = severity
-        ? `http://127.0.0.1:5000/api/cves?severity=${severity}`
-        : 'http://127.0.0.1:5000/api/cves';
+        ? `https://threatpulse-api.onrender.com/api/cves?severity=${severity}`
+        : 'https://threatpulse-api.onrender.com/api/cves';
       const res = await fetch(url);
       const data = await res.json();
       if (data.success) setCVEs(data.cves);
